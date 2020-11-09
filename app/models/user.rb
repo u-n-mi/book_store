@@ -9,7 +9,6 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :encrypted_password, presence: true
 
-  has_many :roles
   has_many :books, dependent: :destroy
   has_many :orders, through: :books
   has_attachment :photo
