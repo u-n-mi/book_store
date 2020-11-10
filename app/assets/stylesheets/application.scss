@@ -12,6 +12,11 @@
 @import "components/index";
 @import "pages/index";
 
+
+.text-justify {
+  text-align: justify;
+}
+
 .jumbotron {
     background-image: url("https://lewagon.masscom.media/assets/images/hero-bg.jpg");
     background-size: cover;
@@ -169,3 +174,4 @@ height: 100%;
     padding: 20px;
     border-radius: .5rem;
   }
+
