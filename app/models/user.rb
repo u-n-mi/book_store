@@ -12,4 +12,5 @@ class User < ApplicationRecord
   has_many :books, dependent: :destroy
   has_many :orders, through: :books
   has_one_attached :photo
+
 end
