@@ -1,20 +1,25 @@
 class BooksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show]
   def new
-      @book = Book.new
+      @books = Book.new
   end
 
   def create
-    @book = Book.new(book_params)
-    @book.user = current_user
-    if @book.save
-      redirect_to book_path(@book)
+    @books = Book.new(book_params)
+    @books.user = current_user
+    if @books.save
+      redirect_to books_path(@book)
     end
   end
 
   def show
-    @book = Book.find(params[:id])
+    @books = Book.find(params[:id])
   end
+
+  def index
+    @books = Book.all
+  end
+
 
 
   private
