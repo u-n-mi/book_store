@@ -8,9 +8,9 @@ class User < ApplicationRecord
   # validates :photo, presence: true
   # validates :email, presence: true, uniqueness: true
   # validates :encrypted_password, presence: true
+  has_one_attached :photo
 
   has_many :books, dependent: :destroy
   has_many :orders, through: :books
-  has_one_attached :photo
 
 end
