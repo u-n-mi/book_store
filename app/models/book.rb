@@ -11,6 +11,5 @@ class Book < ApplicationRecord
 
   has_many :users
 
-
-  has_attachment :photo
+  has_many_attached :photos
 end
