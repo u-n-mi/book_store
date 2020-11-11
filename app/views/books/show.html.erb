@@ -13,7 +13,7 @@
 
 /* Fake image */
 .fakeimg {
-  background-color: #aaa;
+  background-color: white;
   width: 100%;
   padding: 20px;
 }
@@ -59,20 +59,23 @@
      <h2>Title: <%= @book.title%></h2>
      <h5>Author: <%= @book.author%></h5>
      <%= image_tag @book.book_img%>
-     
-     <p></p>
+     <br>
      <h5>Price: <%= @book.price%>€</h5>
-     <p>Genre: <%= @book.genre%></p>
-     <p>Description: <%= @book.description%></p>
+     <br>
+     <h6>Genre: <%= @book.genre%></h6>
+     <br>
+     <h6>Description: <%= @book.description%></h6>
+     <br>
     </div>
   </div>
   <div class="rightcolumn">
     <div class="card">
       <h2>The seller</h2>
       <div class="fakeimg" style="height:150px">
-      <img class="profile-img" src="https://www.flaticon.com/free-icon/chinese_3737567?term=profile&page=1&position=6">
+      <%= image_tag @book.profile_img%>
       </div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <p><%=@book.seller%></p>
+      <p>in culpa qui officia deserunt mollit anim..</p>
     </div>
     <div class="card">
       <h3>Do you like it?</h3>
