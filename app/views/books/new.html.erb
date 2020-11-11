@@ -1,13 +1,23 @@
-<%= form_for(@book) do |f| %>
-  <%= f.label :author %>
-  <%= f.text_field :author %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :genre %>
-  <%= f.text_field :genre %>
-  <%= f.label :price %>
-  <%= f.number_field :price %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.submit %>
+
+<!--   <%= form_for(@book) do |f| %>
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :genre %>
+    <%= f.text_field :genre %>
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.submit %>
+  <% end %>
+ -->
+<h1>add book</h1>
+
+<%= render 'form', book: @book %>
+
+<hr>
+<%= link_to books_path do %>
+  <i class="fa fa-history"></i> Back to list
 <% end %>
