@@ -1,4 +1,4 @@
-class OrderController < ApplicationController
+class OrdersController < ApplicationController
   def create
     @book = Book.find(params[:book_id])
     @order = Order.new
