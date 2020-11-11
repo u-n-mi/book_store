@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :books, only: [:new, :create, :show]
 
-  get 'books/:id', to: "books#show"
   #get 'orders/new', to: "orders#new"
   #post 'orders/new', to: "orders#create"
   #get 'books/new', to: "books#new"
