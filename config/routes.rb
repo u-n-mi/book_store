@@ -6,13 +6,13 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :books, only: [:new, :create, :show]
 
-  #get 'orders/new', to: "orders#new"
-  #post 'orders/new', to: "orders#create"
-  #get 'books/new', to: "books#new"
-  #post 'books/new', to: "books#create"
-  #get 'books/id/edit', to: "books#edit"
-  #patch 'books/id/edit', to: "books#uptade"
-  #delete 'books/id/destroy', to: "books#destroy"
+  get 'orders/new', to: "orders#new"
+  post 'orders/new', to: "orders#create"
+  get 'books/new', to: "books#new"
+  post 'books/new', to: "books#create"
+  get 'books/:id/edit', to: "books#edit"
+  patch 'books/:id/edit', to: "books#uptade"
+  delete 'books/:id/destroy', to: "books#destroy"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
