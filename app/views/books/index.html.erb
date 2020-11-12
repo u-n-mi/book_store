@@ -15,4 +15,24 @@
   <% end %>
 </div>
 
+<hr>
 
+<div class="card-group">
+ <% @books.each do |book| %>
+  <div class="card">
+    <%= image_tag book.book_img, class: "card-img-top" %>
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= book.author %></li>
+        <li class="list-group-item"><%= book.title %></li>
+        <li class="list-group-item"><%= book.genre %></li>
+        <li class="list-group-item"><%= book.price %></li>
+      </ul>
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-secondary"><a href="<%= books_order_path %>">Buy</a></button>
+      <button type="button" class="btn btn-secondary"><a href="<%= link_to "See More", book_path(book) %>"></a></button>
+    </div>
+  </div>
+ <% end %>
+</div>
