@@ -48,8 +48,6 @@ ActiveRecord::Schema.define(version: 2020_11_12_151412) do
     t.string "book_img"
     t.string "profile_img"
     t.string "seller"
-    t.string "seller_img"
-    t.string "user_name"
     t.index ["user_id"], name: "index_books_on_user_id"
   end
 
@@ -69,6 +67,7 @@ ActiveRecord::Schema.define(version: 2020_11_12_151412) do
     t.integer "book_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "status", default: "pending"
   end
 
   create_table "payments", force: :cascade do |t|

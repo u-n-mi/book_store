@@ -78,6 +78,7 @@
       <p><%=@book.seller%></p>
     </div>
     <div class="card">
+
       <h3>Do you like it?</h3>
       <button class="button"><a href="<%= payments_new_path(book_id: @book.id)%>">Buy</button>
       <br>
@@ -85,6 +86,7 @@
     <div class="card">
       <h3>Any doubts?</h3>
       <button type="button" class="button"><a href="<%= messages_new_path(book_id: @book.id)%>">Say Hi</a></button>
+
     </div>
   </div>
 </div>
