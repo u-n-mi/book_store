@@ -51,6 +51,16 @@ ActiveRecord::Schema.define(version: 2020_11_11_160554) do
     t.index ["user_id"], name: "index_books_on_user_id"
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.string "description"
+    t.string "email"
+    t.string "phone"
+    t.integer "user_id"
+    t.integer "book_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "orders", force: :cascade do |t|
     t.integer "total"
     t.integer "user_id"
