@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
     @order.user = current_user
     @order.status = "Pending seller validation"
     if @order.save
-      redirect_to order_path(@order)
+      redirect_to dashboard_path
     end
   end
 

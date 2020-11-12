@@ -14,9 +14,11 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    @order = Order.new
   end
 
   def index
+    @order = Order.new
     if params[:query].present?
       @books = Book.search_by_title_and_author_and_genre_and_description(params[:query])
     else
