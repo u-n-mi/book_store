@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:show]
+  skip_before_action :authenticate_user!, only: [:show, :index]
   def new
     @book = Book.new
   end
@@ -17,7 +17,11 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.all
+    if params[:query].present?
+      @books = Book.search_by_title_and_author_and_genre_and_description(params[:query])
+    else
+      @books = Book.all
+    end
   end
 
   private
@@ -26,3 +30,4 @@ class BooksController < ApplicationController
     params.require(:book).permit(:title, :author, :genre, :price, :description, :book_img)
   end
 end
+

@@ -4,14 +4,9 @@ class OrdersController < ApplicationController
     @order = Order.new
     @order.book = @book
     @order.user = current_user
-    # if @order.confirm
-    # @order.value = @order.book.to_f * shipping
-    # else
-    # @book.value = 0
-    # end
-    if @order.save!
-      redirect_to books_path
-      # else ?
+    @order.status = "Pending seller validation"
+    if @order.save
+      redirect_to order_path(@order)
     end
   end
 

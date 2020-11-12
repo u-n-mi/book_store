@@ -78,16 +78,15 @@
       <p><%=@book.seller%></p>
     </div>
     <div class="card">
-      <h3>Buy</h3>
 
-      <%=  link_to "Profile",  book_orders_new_path(@book.id), method: :post%>
-      <!-- <button class="button">Buy</button> -->
+      <h3>Do you like it?</h3>
+      <button class="button"><a href="<%= payments_new_path(book_id: @book.id)%>">Buy</button>
       <br>
     </div>
     <div class="card">
-      <h3>Contact the Seller</h3>
-      <button class="button">Say hi</button>
-      <br>
+      <h3>Any doubts?</h3>
+      <button type="button" class="button"><a href="<%= messages_new_path(book_id: @book.id)%>">Say Hi</a></button>
+
     </div>
   </div>
 </div>
