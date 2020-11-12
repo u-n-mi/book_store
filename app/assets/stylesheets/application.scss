@@ -16,29 +16,23 @@
 .text-justify {
   text-align: justify;
 }
-
-.jumbotron {
-    background-image: url("https://lewagon.masscom.media/assets/images/hero-bg.jpg");
-    background-size: cover;
-    height: 60vh;
-  }
  
-  hr {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
+hr {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
  
-  /* CARDS */
-  .card {
-    margin-top: 2em;
-    margin-bottom: 2em;
-  }
+/* CARDS */
+.card {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
  
-  .card-img-top {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
- }
+.card-img-top {
+width: 100%;
+height: 15vw;
+object-fit: cover;
+}
 
 /* FOOTER */
  .bg-grey {
@@ -48,7 +42,7 @@
     margin-bottom: 40px;
  }
  footer {
-        color: grey;
+        color: #fff;
  }
 
 footer h6 {
@@ -118,6 +112,10 @@ text-decoration: none;
 color: grey;
 text-decoration:none;
 }
+
+a {
+  color: #7D7772;
+}
 a:hover {
 text-decoration: none;
 color: #f5f5f5 !important;
@@ -133,97 +131,409 @@ height: 100%;
     object-fit: cover;
  }
 
- /* Carousel EXP */
+/*Profile Card 1*/
+.profile-card-1 {
+	font-family: 'Open Sans', Arial, sans-serif;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 100%;
+	color: #ffffff;
+	text-align: center;
+	height:368px;
+	border:none;
+  }
+  .profile-card-1 .background {
+	width:100%;
+	vertical-align: top;
+	opacity: 0.9;
+	-webkit-filter: blur(5px);
+	filter: blur(5px);
+	 -webkit-transform: scale(1.8);
+	transform: scale(2.8);
+  }
+  .profile-card-1 .card-content {
+	width: 100%;
+	padding: 15px 25px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+  }
+  .profile-card-1 .profile {
+	border-radius: 50%;
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	max-width: 100px;
+	opacity: 1;
+	box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+	border: 2px solid rgba(255, 255, 255, 1);
+	-webkit-transform: translate(-50%, 0%);
+	transform: translate(-50%, 0%);
+  }
+  .profile-card-1 h2 {
+	margin: 0 0 5px;
+	font-weight: 600;
+	font-size:25px;
+  }
+  .profile-card-1 h2 small {
+	display: block;
+	font-size: 15px;
+	margin-top:10px;
+  }
+  .profile-card-1 i {
+	display: inline-block;
+	  font-size: 16px;
+	  color: #ffffff;
+	  text-align: center;
+	  border: 1px solid #fff;
+	  width: 30px;
+	  height: 30px;
+	  line-height: 30px;
+	  border-radius: 50%;
+	  margin:0 5px;
+  }
+  .profile-card-1 .icon-block{
+	  float:left;
+	  width:100%;
+	  margin-top:15px;
+  }
+  .profile-card-1 .icon-block a{
+	  text-decoration:none;
+  }
+  .profile-card-1 i:hover {
+	background-color:#fff;
+	color:#2E3434;
+	text-decoration:none;
+  }
 
- .carousel {
-    width: 100%;
-  }
-  
-  .slide-box {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  @media (min-width: 576px) and (max-width: 767.98px) {
-    .slide-box img {
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-  }
-  
-  @media (min-width: 768px) and (max-width: 991.98px) {
-    .slide-box img {
-      -ms-flex: 0 0 33.3333%;
-      flex: 0 0 33.3333%;
-      max-width: 33.3333%;
-    }
-  }
-  
-  @media (min-width: 992px)
-  {
-    .slide-box img {
-      -ms-flex: 0 0 25%;
-      flex: 0 0 25%;
-      max-width: 25%;
-    }
-  }
-  
-  .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: .5rem;
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+	padding-top: 3rem;
+	color: #5a5a5a;
   }
 
 /* NAV */
 
-#login-dp{
-  min-width: 250px;
-  padding: 14px 14px 0;
-  overflow:hidden;
-  background-color:rgba(255,255,255,.8);
+.form-control {
+	box-shadow: none;		
+	font-weight: normal;
+	/* font-size: 13px; */
 }
-#login-dp .help-block{
-  font-size:12px    
+.navbar {
+	background: #fff;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-bottom: 1px solid #dfe3e8;
+	border-radius: 0;
 }
-#login-dp .bottom{
-  background-color:rgba(255,255,255,.8);
-  border-top:1px solid #ddd;
-  clear:both;
-  padding:14px;
+.nav-link img {
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	margin: -8px 0;
+	float: left;
+	margin-right: 10px;
 }
-#login-dp .social-buttons{
-  margin:12px 0    
+.navbar .navbar-brand {
+	padding-left: 0;
+	font-size: 20px;
+	padding-right: 50px;
 }
-#login-dp .social-buttons a{
-  width: 49%;
+.navbar .navbar-brand b {
+	color: #33cabb;		
 }
-#login-dp .form-group {
-  margin-bottom: 10px;
+.navbar .form-inline {
+	display: inline-block;
 }
-.btn-fb{
-  color: #fff;
-  background-color:#3b5998;
+.navbar a {
+	color: #888;
+	font-size: 15px;
 }
-.btn-fb:hover{
-  color: #fff;
-  background-color:#496ebc 
+.search-box {
+	position: relative;
+}	
+.search-box input {
+	padding-right: 35px;
+	border-color: #dfe3e8;
+	border-radius: 4px !important;
+	box-shadow: none
 }
-.btn-tw{
-  color: #fff;
-  background-color:#55acee;
+.search-box .input-group-text {
+	min-width: 35px;
+	border: none;
+	background: transparent;
+	position: absolute;
+	right: 0;
+	z-index: 9;
+	padding: 7px;
+	height: 100%;
 }
-.btn-tw:hover{
-  color: #fff;
-  background-color:#59b5fa;
+.search-box i {
+	color: #a0a5b1;
+	font-size: 19px;
 }
-@media(max-width:768px){
-  #login-dp{
-      background-color: inherit;
-      color: #fff;
+.navbar .sign-up-btn {
+	min-width: 110px;
+	max-height: 36px;
+}
+.navbar .dropdown-menu {
+	color: #999;
+	font-weight: normal;
+	border-radius: 1px;
+	border-color: #e5e5e5;
+	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar a, .navbar a:active {
+	color: #888;
+	padding: 8px 20px;
+	background: transparent;
+	line-height: normal;
+}
+.navbar .navbar-form {
+	border: none;
+}
+.navbar .action-form {
+	width: 280px;
+	padding: 20px;
+	left: auto;
+	right: 0;
+	font-size: 14px;
+}
+.navbar .action-form a {		
+	color: #33cabb;
+	padding: 0 !important;
+	font-size: 14px;
+}
+.navbar .action-form .hint-text {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+.navbar .btn-primary, .navbar .btn-primary:active {
+	color: #fff;
+	background: #33cabb !important;
+	border: none;
+}	
+.navbar .btn-primary:hover, .navbar .btn-primary:focus {		
+	color: #fff;
+	background: #31bfb1 !important;
+}
+.navbar .social-btn .btn, .navbar .social-btn .btn:hover {
+	color: #fff;
+	margin: 0;
+	padding: 0 !important;
+	font-size: 13px;
+	border: none;
+	transition: all 0.4s;
+	text-align: center;
+	line-height: 34px;
+	width: 47%;
+	text-decoration: none;
+}
+.navbar .social-btn .facebook-btn {
+	background: #507cc0;
+}
+.navbar .social-btn .facebook-btn:hover {
+	background: #4676bd;
+}
+.navbar .social-btn .twitter-btn {
+	background: #64ccf1;
+}
+.navbar .social-btn .twitter-btn:hover {
+	background: #4ec7ef;
+}
+.navbar .social-btn .btn i {
+	margin-right: 5px;
+	font-size: 16px;
+	position: relative;
+	top: 2px;
+}
+.or-seperator {
+	margin-top: 32px;
+	text-align: center;
+	border-top: 1px solid #e0e0e0;
+}
+.or-seperator b {
+	color: #666;
+	padding: 0 8px;
+	width: 30px;
+	height: 30px;
+	font-size: 13px;
+	text-align: center;
+	line-height: 26px;
+	background: #fff;
+	display: inline-block;
+	border: 1px solid #e0e0e0;
+	border-radius: 50%;
+	position: relative;
+	top: -15px;
+	z-index: 1;
+}
+.navbar .action-buttons .dropdown-toggle::after {
+	display: none;
+}
+.form-check-label input {
+	position: relative;
+	top: 1px;
+}
+@media (min-width: 1200px){
+	.form-inline .input-group {
+		width: 300px;
+		margin-left: 30px;
+	}
+}
+@media (max-width: 768px){
+	.navbar .dropdown-menu.action-form {
+		width: 100%;
+		padding: 10px 15px;
+		background: transparent;
+		border: none;
+	}
+	.navbar .form-inline {
+		display: block;
+	}
+	.navbar .input-group {
+		width: 100%;
+	}
+}
+
+  /* CUSTOMIZE THE CAROUSEL
+  -------------------------------------------------- */
+  
+  /* Carousel base class */
+  .carousel {
+	margin-bottom: 4rem;
   }
-  #login-dp .bottom{
-      background-color: inherit;
-      border-top:0 none;
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	border-radius: .5rem;	  
+	bottom: 3rem;
+	z-index: 10;
   }
+
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+	height: 32rem;
+	background-color: #fff;
+  }
+  
+  .carousel-item > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	height: 32rem;
+  }
+  
+  
+  /* MARKETING CONTENT
+  -------------------------------------------------- */
+  
+  /* Center align the text within the three columns below the carousel */
+  .marketing .col-lg-4 {
+	margin-bottom: 1.5rem;
+	text-align: center;
+  }
+  .marketing h2 {
+	font-weight: 400;
+  }
+  .marketing .col-lg-4 p {
+	margin-right: .75rem;
+	margin-left: .75rem;
+  }
+  
+  
+  /* Featurettes
+  ------------------------- */
+  
+  .featurette-divider {
+	margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  }
+  
+  /* Thin out the marketing headings */
+  .featurette-heading {
+	font-weight: 300;
+	line-height: 1;
+	letter-spacing: -.05rem;
+  }
+  
+  
+  /* RESPONSIVE CSS
+  -------------------------------------------------- */
+  
+  @media (min-width: 40em) {
+	/* Bump up size of carousel content */
+	.carousel-caption p {
+	  margin-bottom: 1.25rem;
+	  font-size: 1.25rem;
+	  line-height: 1.4;
+	}
+  
+	.featurette-heading {
+	  font-size: 50px;
+	}
+  }
+  
+  @media (min-width: 62em) {
+	.featurette-heading {
+	  margin-top: 7rem;
+	}
+  }
+
+/* Experimental button style (reset) */
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background-color: #33CABB;
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Button 1 */
+.btn-1 {
+	border: 3px solid #fff;
+	color: #fff;	
+}
+
+  /* Button 1c */
+.btn-1c:after {
+	width: 0%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #fff;
+}
+
+.btn-1c:hover,
+.btn-1c:active {
+	color: #0e83cd;
+}
+
+.btn-1c:hover:after,
+.btn-1c:active:after {
+	width: 100%;
 }
