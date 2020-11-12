@@ -1,7 +1,6 @@
 class MessagesController < ApplicationController
     def new
         @message = Message.new
-        byebug
     end
 
     def create
