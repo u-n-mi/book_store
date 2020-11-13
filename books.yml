@@ -1,16 +1,16 @@
 books_to_sell:
   -title: title1
-  author: author1
-  genre: drama
-  description: descritption1
+   author: author1
+   genre: drama
+   description: descritption1
   -title: title2
-  author: author2
-  genre: humor
-  description: descritption2
+   author: author2
+   genre: humor
+   description: descritption2
   -title: title3
-  author: author3
-  genre: romance
-  description: descritption3
+   author: author3
+   genre: romance
+   description: descritption3
   
   
   users:
@@ -21,15 +21,15 @@ books_to_sell:
       
       
 books_orders:
-  -title: title4
-  author: author4
-  genre: drama
-  description: descritption4
-  -title: title5
-  author: author5
-  genre: humor
-  description: descritption5
-  -title: title6
-  author: author6
-  genre: romance
-  description: descritption6
+  - title: title4
+    author: author4
+    genre: drama
+    description: descritption4
+  - title: title5
+    author: author5
+    genre: humor
+    description: descritption5
+  - title: title6
+   author: author6
+    genre: romance
+    description: descritption6
