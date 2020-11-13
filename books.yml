@@ -1,16 +1,33 @@
-10.times do
-  book = Book.create(title: Faker::Book.title,
-  author: Faker::Book.author,
-  genre: Faker::Book.genre,
-  price: rand(10..50),
-  description:Faker::Lorem.sentence,
-  user: User.first,
-  seller: Faker::Name.name)
-end
+books_to_sell:
+ - title: title1
+   author: author1
+   genre: drama
+   description: descritption1
+ - title: title2
+   author: author2
+   genre: humor
+   description: descritption2
+ - title: title3
+   author: author3
+   genre: romance
+   description: descritption3
 
+  users:
+  - first_name: jeff
+    last_name: bezos
+    email: jeff@bezos.com
+    password: 123456
 
-user:
-  - email: jeff@bezos.com
-    password: 123456
-  - email: jonny@davis.com
-    password: 123456
+books_orders:
+ - title: title4
+   author: author4
+   genre: drama
+   description: descritption4
+ - title: title5
+   author: author5
+   genre: humor
+   description: descritption5
+ - title: title6
+   author: author6
+   genre: romance
+   description: descritption6

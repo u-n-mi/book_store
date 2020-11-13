@@ -23,11 +23,25 @@
       <p><%=@book.seller%></p>
     </div>
     <div class="card">
+      <h3>Buy</h3>
+      <button class="button"><a href="<%= @book.id)%>">Buy</button>
+
+
+
+      <%=  link_to "Profile",  book_orders_new_path(@book.id), method: :post%>
+      <!-- <button class="button">Buy</button> -->
+      <br>
+    </div>
+    <div class="card">
+      <h3>Contact the Seller</h3>
+      <button class="button">Say hi</button>
+      <br>
 
       <h3>Do you like it?</h3>
       <%= simple_form_for [@book,@order] do |f|%>
       <%= f.submit "Buy", class: "btn btn-primary" %>
       <% end %>
+
 
       <br>
     </div>

@@ -2,6 +2,7 @@ class Book < ApplicationRecord
   belongs_to :user
   has_many :users
   has_many :messages
+  has_one_attached :photo
 
   validates :author, presence: true
   validates :title, presence: true
