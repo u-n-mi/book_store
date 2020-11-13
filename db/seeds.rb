@@ -1,25 +1,33 @@
-puts "Cleaning the DB"
+require "open-uri"
+require "yaml"
 
+puts "Cleaning DB"
+puts "Destroying books"
 Book.destroy_all
+
+puts "Destroying users"
 User.destroy_all
+
+puts "Destroying orders"
 Order.destroy_all
 
-puts "Creating a user"
+file = "https://github.com/u-n-mi/book_store/blob/master/books.yml"
+sample = YAML.load(open(file).read)
 
-user = User.create(email: "jeff@bezos.com",password: "123456")
-
-puts "creating some books"
-
-10.times do
-  book = Book.create(title: Faker::Book.title,
-  author: Faker::Book.author,
-  genre: Faker::Book.genre,
-  price: rand(10..50),
-  description:Faker::Lorem.sentence,
-  user: User.first,
-  book_img: Faker::LoremFlickr.image(size: "400x400", search_terms: ['books']),
-  profile_img: Faker::LoremFlickr.image(size: "150x150", search_terms: ['animals', 'dogs'], match_all: true),
-  seller: Faker::Name.name)
+puts 'Creating books'
+sample["books_to_sell"].each do |book|
+  Book.create! book
 end
 
-puts "finished!"
+puts 'creating users'
+users= {}
+sample["users"].each do |user|
+  users = User.create!
+end
+
+puts 'Creating orders'
+sample["books_orders"].each do |order|
+  Order.create! order
+end
+
+puts 'Finished!'
