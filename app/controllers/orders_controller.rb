@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
     @order.book = @book
     @order.user = current_user
     if @order.save
-      redirect_to dashboard
+      redirect_to dashboard_path
     end
   end
 
