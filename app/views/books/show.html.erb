@@ -18,7 +18,9 @@
     <div class="card">
       <h2>The seller</h2>
       <div class="fakeimg" style="height:150px">
+
         <img src="https://lewagon.masscom.media/assets/images/profile.jpg" alt="customer image" width="150" height="150">
+  
       </div>
       <br>
       <p><%=@book.seller%></p>
@@ -27,14 +29,16 @@
 
     <div class="card">
       <h3>Do you like it?</h3>
+
       <%= simple_form_for [@book,@order] do |f|%>
-      <%= f.submit "Buy", class: "btn btn-primary" %>
+      <%= f.submit "Buy", class: "btn btn-primary btn-block" %>
       <% end %>
+
       <br>
     </div>
     <div class="card">
       <h3>Any doubts?</h3>
-      <button type="button" class="button">Say Hi</button>
+      <button type="button" class="btn btn-primary">Say Hi</button>
     </div>
   </div>
   </div>
