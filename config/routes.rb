@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   # get 'payments/new', to: "payments#new" # --> create a new payment
   # post 'payments/new', to: "payments#create" #-->post/send the payment
   get 'dashboard', to: "pages#dashboard"
+  get 'orders/new', to: "orders#new"
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

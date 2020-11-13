@@ -3,9 +3,9 @@
     <div class="card">
      <h2>Title: <%= @book.title%></h2>
      <h5>Author: <%= @book.author%></h5>
-     <%= image_tag @book.book_img%>
+     
      <br>
-     <h5>Price: <%= @book.price%>€</h5>
+     <h5>Price: <%= @book.price%>$</h5>
      <br>
      <h6>Genre: <%= @book.genre%></h6>
      <br>
@@ -17,38 +17,25 @@
     <div class="card">
       <h2>The seller</h2>
       <div class="fakeimg" style="height:150px">
-      <%= image_tag @book.book_img %>
       </div>
       <br>
       <p><%=@book.seller%></p>
     </div>
-    <div class="card">
-      <h3>Buy</h3>
-      <button class="button"><a href="<%= @book.id)%>">Buy</button>
 
 
-
-      <%=  link_to "Profile",  book_orders_new_path(@book.id), method: :post%>
-      <!-- <button class="button">Buy</button> -->
-      <br>
-    </div>
     <div class="card">
       <h3>Contact the Seller</h3>
-      <button class="button">Say hi</button>
+      <button class="button">Buy</button>
       <br>
-
       <h3>Do you like it?</h3>
       <%= simple_form_for [@book,@order] do |f|%>
       <%= f.submit "Buy", class: "btn btn-primary" %>
       <% end %>
-
-
       <br>
     </div>
     <div class="card">
       <h3>Any doubts?</h3>
       <button type="button" class="button">Say Hi</button>
-
     </div>
   </div>
 </div>
