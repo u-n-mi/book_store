@@ -26,9 +26,11 @@
 
     <div class="card">
       <h3>Do you like it?</h3>
+
       <%= simple_form_for [@book,@order] do |f|%>
-      <%= f.submit "Buy", class: "btn btn-primary" %>
+      <%= f.submit "Buy", class: "btn btn-primary btn-block" %>
       <% end %>
+
       <br>
     </div>
     <div class="card">
