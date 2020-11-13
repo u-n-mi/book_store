@@ -9,15 +9,11 @@ Rails.application.routes.draw do
     post 'orders/new', to: "orders#create"  #--> This is "ordering" a new book!
   end
 
-  get 'books/new', to: "books#new"  # --> This is the form to "selling" a new book!
-  post 'books/new', to: "books#create" #--> This is the actually sale (the button, show the book to sell)!
   get 'books/:id/edit', to: "books#edit" #--> This is edit the book that is for sale!
   patch 'books/:id/edit', to: "books#update" # --> this is when you press the button and update!
   delete 'books/:id/destroy', to: "books#destroy" # --> this is deleting the sale page!
-  get 'messages/new', to: "messages#new" # --> Create e a new message
-  post 'messages/new', to: "messages#create" # --> post a new message
   get 'payments/new', to: "payments#new" # --> create a new payment
-  post 'payments/new', to: "payments#create" #-->post/send the payment
+  get 'dashboard', to: "pages#dashboard"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

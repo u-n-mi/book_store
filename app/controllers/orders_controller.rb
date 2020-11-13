@@ -5,8 +5,8 @@ class OrdersController < ApplicationController
     @order.book = @book
     @order.user = current_user
     @order.status = "Pending seller validation"
-    if @order.save
-      redirect_to order_path(@order)
+    if @order.save!
+      redirect_to books_path #is not chaging color
     end
   end
 
