@@ -4,7 +4,6 @@ class OrdersController < ApplicationController
     @order = Order.new
     @order.book = @book
     @order.user = current_user
-    @order.status = "Pending seller validation"
     if @order.save
       redirect_to dashboard_path
     end
@@ -21,7 +20,6 @@ class OrdersController < ApplicationController
 
   def update
     @order = Order.find(params[:id])
-    @order.status = "pending seller validation"
     @order.save!
     redirect_to order_path(@order)
   end
@@ -35,6 +33,6 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:book)
+    params.require(:order).permit(:book, :photo)
   end
 end
