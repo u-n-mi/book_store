@@ -23,7 +23,7 @@
     <%= f.label :description %>
     <%= f.text_field :description, class: 'form-control' %>
   </div>
-
+  <%= f.file_field :photo, direct_upload: true, accept: "image/png,image/gif,image/jpeg" %>
 <!--   <% unless f.object.new_record? %>
     <div class="checkbox">
       <label>
