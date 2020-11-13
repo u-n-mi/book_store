@@ -13,11 +13,18 @@
     <%= f.submit %>
   <% end %>
  -->
-<h1>add book</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <hr>
+      <h1>Add a Book</h1>
+      <hr>
+      <%= render 'form', book: @book %>
+      <hr>
+      <%= link_to books_path do %>
+        <i class="fa fa-history"></i> Back to list
+      <% end %>
+    </div>
 
-<%= render 'form', book: @book %>
-
-<hr>
-<%= link_to books_path do %>
-  <i class="fa fa-history"></i> Back to list
-<% end %>
+  </div>
+</div>
